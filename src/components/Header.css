@@ -28,3 +28,17 @@
 .header_middle > .MuiSvgIcon-root {
     color: grey;
 }
+
+.header_middle > input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: medium;
+    background-color: transparent;
+}
+
+.header_right {
+    display: flex;
+    padding-right: 20px;
+}
