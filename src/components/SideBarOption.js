@@ -3,8 +3,10 @@ import './SideBarOption.css';
 
 function SideBarOption() {
     return (
-        <div>
-            
+        <div className='sideBarOption'>
+            <Icon />
+            <h1>{title}</h1>
+            <p>{number}</p> 
         </div>
     )
 }
