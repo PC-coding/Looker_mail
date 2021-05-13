@@ -11,10 +11,10 @@
 
 .sideBarOption:hover,
 .sideBarOption:hover > p,
-.sideBarOption:hover > h3,
+.sideBarOption:hover > h1,
 .sideBarOption--active,
 .sideBarOption--active > p,
-.sideBarOption--active > h3 {
+.sideBarOption--active > h1 {
     background-color: #fcecec;
     color: #c04b37;
     font-weight: 800 !important;
@@ -24,7 +24,7 @@
     padding: 5px;
 }
 
-.sideBarOption > h3 {
+.sideBarOption > h1 {
     flex: 1;
     margin-left: 10px;
     font-size: 14px;
