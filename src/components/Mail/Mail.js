@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './Mail.css';
 
 function Mail() {
     return (
-        <div>
+        <div className='mail'>
             
         </div>
     )
