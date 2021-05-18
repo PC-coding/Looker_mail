@@ -6,6 +6,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import KeyboardHideIcon from '@material-ui/icons/KeyboardHide';
+import Section from '../Section/Section';
 import './EmailList.css';
 
 function EmailList() {
@@ -40,7 +41,7 @@ function EmailList() {
                 </div>
             </div>
             <div className='emailList_settingsSections'>
-                
+                <Section Icon={InboxIcon} title='primary' color='red' selected />
             </div>
             
         </div>
