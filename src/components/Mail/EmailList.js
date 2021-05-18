@@ -6,6 +6,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import KeyboardHideIcon from '@material-ui/icons/KeyboardHide';
+import PeopleIcon from '@material-ui/icons/People';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import Section from '../Section/Section';
 import './EmailList.css';
 
@@ -42,6 +44,8 @@ function EmailList() {
             </div>
             <div className='emailList_settingsSections'>
                 <Section Icon={InboxIcon} title='primary' color='red' selected />
+                <Section Icon={PeopleIcon} title='social' color='#1A73E8' />
+                <Section Icon={LocalOfferIcon} title='Promotions' color='green' />
             </div>
             
         </div>
