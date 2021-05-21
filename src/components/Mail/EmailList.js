@@ -9,6 +9,8 @@ import KeyboardHideIcon from '@material-ui/icons/KeyboardHide';
 import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import Section from '../Section/Section';
+import SettingsIcon from '@material-ui/icons/Settings';
+import InboxIcon from '@material-ui/icons/Inbox';
 import './EmailList.css';
 
 function EmailList() {
@@ -42,7 +44,7 @@ function EmailList() {
                     </IconButton>
                 </div>
             </div>
-            <div className='emailList_settingsSections'>
+            <div className='emailList_Sections'>
                 <Section Icon={InboxIcon} title='primary' color='red' selected />
                 <Section Icon={PeopleIcon} title='social' color='#1A73E8' />
                 <Section Icon={LocalOfferIcon} title='Promotions' color='green' />
