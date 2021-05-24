@@ -12,6 +12,7 @@ import Section from '../Section/Section';
 import SettingsIcon from '@material-ui/icons/Settings';
 import InboxIcon from '@material-ui/icons/Inbox';
 import './EmailList.css';
+import EmailRow from './EmailRow';
 
 function EmailList() {
     return (
@@ -50,7 +51,7 @@ function EmailList() {
                 <Section Icon={LocalOfferIcon} title='Promotions' color='green' />
             </div>
             <div className='emailList_list'>
-                
+                <EmailRow />
             </div>
             
         </div>
