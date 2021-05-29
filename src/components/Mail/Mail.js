@@ -1,6 +1,7 @@
 import { CheckCircle } from '@material-ui/icons';
 import React from 'react';
 import './Mail.css';
+import { IconButton } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import MoveToInboxIcon from '@material-ui/icons/MoveToInbox';
 import ErrorIcon from '@material-ui/icons/Error';
@@ -10,13 +11,18 @@ import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore';
+import PrintIcon from '@material-ui/icons/Print';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { useHistory } from 'react-router-dom';
 
 function Mail() {
+    const history = useHistory();
     return (
         <div className='mail'>
             <div className='mail_tools'>
                 <div className='mail_toolsLeft'>
-                    <IconButton>
+                    <IconButton onClick={() => history.push('/')}>
                         <ArrowBackIcon />
                     </IconButton>
                     <IconButton>
@@ -45,7 +51,15 @@ function Mail() {
                     </IconButton>
                 </div>
                 <div className='mail_toolsRight'>
-
+                    <IconButton>
+                        <UnfoldMoreIcon />
+                    </IconButton>
+                    <IconButton>
+                        <PrintIcon />
+                    </IconButton>   
+                    <IconButton>
+                        <ExitToAppIcon />
+                    </IconButton>
                 </div>
             </div>
         </div>
