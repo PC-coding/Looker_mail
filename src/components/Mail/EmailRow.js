@@ -1,7 +1,7 @@
-import { IconButton } from '@material-ui/core';
+import React from 'react';
+import { IconButton, Checkbox } from '@material-ui/core';
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import LabelImportantOutlinedIcon from '@material-ui/icons/LabelImportantOutlined';
-import React from 'react';
 import './EmailRow.css';
 import { useHistory } from 'react-router-dom';
 
