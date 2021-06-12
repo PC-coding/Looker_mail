@@ -6,8 +6,8 @@ import { useForm } from 'react-router-dom';
 function SendMail() {
     const { register, handleSubmit, watch, errors } = useForm();
     
-    const onSubmit = (data) => {
-        console.log(data);
+    const onSubmit = (formData) => {
+        console.log(formData);
     }
     return (
         <div className='sendMail'>
@@ -20,6 +20,7 @@ function SendMail() {
                 
                 <input placeholder='To' type='text' ref={register({ required: true })} />
                 <input placeholder='Subject' type='text' ref={register({ required: true })} />
+                {errors.subject && <p className='sendMail_error'>To is Required!</p>}
                 <input className='sendMail_message' placeholder='Message...' type='text' ref={register({ required: true })} />
 
                 <div className='sendMail_option'>
