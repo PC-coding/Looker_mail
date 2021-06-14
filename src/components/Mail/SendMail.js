@@ -2,10 +2,13 @@ import React from 'react';
 import './SendMail.css';
 import CloseIcon from '@material-ui/icons/Close';
 import { useForm } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { closeSendMessage } from '../../features/mailSlice';
 
 function SendMail() {
     const { register, handleSubmit, watch, errors } = useForm();
-    
+    const dispatch = useDispatch();
+
     const onSubmit = (formData) => {
         console.log(formData);
     }
