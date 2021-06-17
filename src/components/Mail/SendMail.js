@@ -11,6 +11,12 @@ function SendMail() {
 
     const onSubmit = (formData) => {
         console.log(formData);
+        db.collection('emails').add({
+            to: formData.to,
+            subject: formData.subject,
+            message: formData.message,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        });
     }
     return (
         <div className='sendMail'>
