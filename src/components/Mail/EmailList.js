@@ -51,7 +51,23 @@ function EmailList() {
                 <Section Icon={LocalOfferIcon} title='Promotions' color='green' />
             </div>
             <div className='emailList_list'>
-                <EmailRow />
+                {emails.map(email => (
+                    <EmailRow
+
+                    />
+                ))}
+                <EmailRow
+                    title='Twitch'
+                    subject='Hello Streamer :)'
+                    description='Testing'
+                    time='8pm' 
+                />
+                 <EmailRow
+                    title='Twitch'
+                    subject='Hello Streamer :)'
+                    description='Testing Again'
+                    time='8pm' 
+                />
             </div>
             
         </div>
