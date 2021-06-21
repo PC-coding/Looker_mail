@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Checkbox, IconButton } from '@material-ui/core';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import RedoIcon from '@material-ui/icons/Redo';
@@ -15,6 +15,21 @@ import './EmailList.css';
 import EmailRow from './EmailRow';
 
 function EmailList() {
+    const [emails, setEmails] = useState([]);
+
+    useEffect(() => {
+        db.collection('emails')
+        .orderBy('timestamp', 'desc')
+        .onSnapShot((snapshot) =>
+            setEmails(
+                snapshot.docs.map((doc) => ({
+                id: doc.id,
+                data: doc.data(),
+                }))
+            )
+        )
+    },[]);
+
     return (
         <div className='emailList'>
             <div className='emailList_settings'>
