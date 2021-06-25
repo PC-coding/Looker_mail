@@ -14,7 +14,7 @@ export const incrementAsync = createAsyncThunk(
   }
 );
 
-export const mailSlice = createSlice({
+export const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {

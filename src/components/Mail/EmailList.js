@@ -13,6 +13,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import InboxIcon from '@material-ui/icons/Inbox';
 import './EmailList.css';
 import EmailRow from './EmailRow';
+import { db } from '../firebase';
 
 function EmailList() {
     const [emails, setEmails] = useState([]);

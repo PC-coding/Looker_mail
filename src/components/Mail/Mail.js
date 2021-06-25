@@ -15,9 +15,12 @@ import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore';
 import PrintIcon from '@material-ui/icons/Print';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectOpenMail } from '../../features/mailSlice';
 
 function Mail() {
     const history = useHistory();
+    const selectedMail = useSelector(selectOpenMail());
     return (
         <div className='mail'>
             <div className='mail_tools'>
