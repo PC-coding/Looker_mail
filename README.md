@@ -1,6 +1,11 @@
 # Looker Mail
 
-- Mail component
-- sending / receiving mail
-- styling to imitate google mail
-- firebase backend to store information + mailed messages
+- Mail component of Looker
+- Google Mail clone
+- Functionalities include:
+    - sending / receiving mail
+    - firebase backend to store information + mailed messages
+
+# Sources
+
+# Demo
