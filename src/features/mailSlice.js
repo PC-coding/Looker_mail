@@ -14,15 +14,21 @@ export const incrementAsync = createAsyncThunk(
   }
 );
 
-export const counterSlice = createSlice({
-  name: 'counter',
-  initialState,
+export const mailSlice = createSlice({
+  name: 'mail',
+  initialState: {
+    selectedMail: null,
+    sendMessageIsOpen: false,
+  },
   reducers: {
+    selectMail: (state, action) => {
+      state.selectedMail = action.payload;
+    },
     openSendMessage: (state) => {
-      state.sendMessageIsOpen += 1;
+      state.sendMessageIsOpen = true;
     },
     closeSendMessage: (state) => {
-      state.sendMessageIsOpen -= 1;
+      state.sendMessageIsOpen = false;
     },
   },
 
@@ -38,16 +44,9 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { openSendMessage, closeSendMessage } = counterSlice.actions;
+export const { selectMail, openSendMessage, closeSendMessage } = mailSlice.actions;
 
-
+export const selectOpenMail = (state) => state.mail.selectedMail;
 export const selectSendMessageIsOpen = (state) => state.counter.sendMessageIsOpen;
-
-export const incrementIfOdd = (amount) => (dispatch, getState) => {
-  const currentValue = selectCount(getState());
-  if (currentValue % 2 === 1) {
-    dispatch(incrementByAmount(amount));
-  }
-};
 
 export default mailSlice.reducer;

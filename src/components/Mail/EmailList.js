@@ -71,7 +71,7 @@ function EmailList() {
                 } }) => (
                     <EmailRow
                         id = {id}
-                        key = {key}
+                        key = {id}
                         title = {to}
                         subject = {subject}
                         description = {message}

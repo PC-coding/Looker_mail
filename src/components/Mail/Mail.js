@@ -21,6 +21,7 @@ import { selectOpenMail } from '../../features/mailSlice';
 function Mail() {
     const history = useHistory();
     const selectedMail = useSelector(selectOpenMail());
+    
     return (
         <div className='mail'>
             <div className='mail_tools'>
